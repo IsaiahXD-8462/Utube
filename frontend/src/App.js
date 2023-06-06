@@ -6,10 +6,16 @@ import "./App.css";
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import ResultPage from "./pages/Result Page/ResultPage"
+import VideosPage from "./pages/Videos Page/VideosPage"
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import { Comments, CommentForm, CommentList } from "./components/Comments";
+import RelatedVideos from "./components/Related Videos/RelatedVideos";
+import SearchBar from "./components/Search Bar/SearchBar";
+import VideoPlayer from "./components/Video Player/VideoPlayer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
