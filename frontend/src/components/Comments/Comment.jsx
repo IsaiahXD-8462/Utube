@@ -6,9 +6,10 @@ const Comment = ({currentUser}) => {
     [comments, setComments] = useState([]);
 
     return (
-        <div>Hi all</div> 
-        // <CommentForm />
-        // <button>Edit</button>
+        <div>Hi all 
+        <CommentForm />
+        <button>Edit</button>
+        </div>
      );
 }
  

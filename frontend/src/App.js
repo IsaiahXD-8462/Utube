@@ -12,7 +12,9 @@ import VideosPage from "./pages/Videos Page/VideosPage"
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import { Comments, CommentForm, CommentList } from "./components/Comments";
+import Comments from "./components/Comments/Comment";
+import CommentForm from "./components/Comments/CommentForm";
+import CommentList from "./components/Comments/CommentList";
 import RelatedVideos from "./components/Related Videos/RelatedVideos";
 import SearchBar from "./components/Search Bar/SearchBar";
 import VideoPlayer from "./components/Video Player/VideoPlayer";
