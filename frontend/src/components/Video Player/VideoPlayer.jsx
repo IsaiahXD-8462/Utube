@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-const video = () => {
+const VideoPlayer = () => {
 
     const { videoID } = useParams();
 
@@ -16,4 +16,4 @@ const video = () => {
     );
 }
 
-export default video;
+export default VideoPlayer;

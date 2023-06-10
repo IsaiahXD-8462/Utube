@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Route } from 'react-router-dom';
-import VideoPlayer from "./"
+import { Routes, Route, Link } from 'react-router-dom';
+import VideoPlayer from "./component/Video Player/VideoPlayer"
 
 const RelatedVideos = (props) => {
     
@@ -10,14 +10,14 @@ const RelatedVideos = (props) => {
     const response = await axios.get('http://127.0.0.1:8000/api/auth/comments/comment/all')
     try {response =>
       console.log(response.data);
-      setVideos(response.data)}
+      setVideo(response.data)}
     catch {error =>
       console.log(error)
     };
   }
    return ( 
         <div>
-            <VideoPlayer></VideoPlayer>
+            <RTCEncodedVideoFrame>{videoID}</RTCEncodedVideoFrame>
         </div>
      );
 }
