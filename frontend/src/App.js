@@ -6,18 +6,12 @@ import "./App.css";
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
-import ResultPage from "./pages/Result Page/ResultPage"
+import SearchPage from "./pages/Search Page/SearchPage";
 import VideosPage from "./pages/Videos Page/VideosPage"
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import Comments from "./components/Comments/Comment";
-import CommentForm from "./components/Comments/CommentForm";
-import CommentList from "./components/Comments/CommentList";
-import RelatedVideos from "./components/Related Videos/RelatedVideos";
-import SearchBar from "./components/Search Bar/SearchBar";
-import VideoPlayer from "./components/Video Player/VideoPlayer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
@@ -27,19 +21,18 @@ function App() {
     <div>
       <Navbar />
       <Routes>
-        <Route
+        {/* <Route
           path="/"
           element={
             <PrivateRoute>
               <HomePage />
             </PrivateRoute>
           }
-        />
+        /> */}
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/search" element={<SearchPage />} />
-        <Route path="/result" element={<ResultPage />} />
-        <Route path="/{videoID}" element={<VideosPage />} />
+        <Route path="/search" element={<SearchPage />} /> // SearchPage Plan - SearchBar, Videos (thumbnails and title)
+        <Route path="/{videoID}" element={<VideosPage />} /> // VideoPage Plan - Video iframe player, on the side the related videos, comments for that video below video title and description
       </Routes>
       <Footer />
     </div>
