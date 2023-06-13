@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Routes, Route, Link } from 'react-router-dom'
 import axios from "axios";
+import VideoPage from "../../pages/Videos Page/VideosPage";
 
 const SearchBar= (props) => {
 
@@ -19,11 +20,11 @@ const SearchBar= (props) => {
     return (
         <form>
             <label>Search</label>
-            <input type='text' value={post} onChange={(event) => searchallmedia(event.target.value)} />
+            <input type='text' value={media} onChange={(event) => searchallmedia(event.target.value)} />
             <input placeholder="Type To Search..." />
             <button type='submit'>search</button>
         <Routes>
-            <Route exact path="/result" element={<ResultPage />} />
+            <Route exact path="/videos" element={<VideoPage />} />
         </Routes>
         </form>
     );

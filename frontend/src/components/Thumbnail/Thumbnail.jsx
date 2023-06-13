@@ -1,6 +1,6 @@
 import VideoThumbnail from 'react-video-thumbnail'
 
-const VideoThumbnail = (props) => {
+const videoThumbnail = (props) => {
     return ( 
         <VideoThumbnail
             videoUrl='https://www.youtube.com/watch?v=${video_ID}'
@@ -11,4 +11,4 @@ const VideoThumbnail = (props) => {
      );
 }
  
-export default VideoThumbnail;
+export default videoThumbnail;

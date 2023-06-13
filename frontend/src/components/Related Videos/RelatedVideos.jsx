@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import axios from 'axios';
-import VideoThumbnail from '../Thumbnail/Thumbnail';
+import videoThumbnail from '../Thumbnail/Thumbnail';
 
 const RelatedVideos = (props) => {
     
@@ -18,7 +18,7 @@ const RelatedVideos = (props) => {
   }
    return ( 
         <div>
-            <VideoThumbnail {video_ID} />
+            <videoThumbnail RelatedVideos='{props.video_ID, props.text}' />
         </div>
      );
 }
