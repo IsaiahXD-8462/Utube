@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import VideoPlayer from "./component/Video Player/VideoPlayer"
+import axios from 'axios';
+import VideoThumbnail from '../Thumbnail/Thumbnail';
 
 const RelatedVideos = (props) => {
     
@@ -17,7 +18,7 @@ const RelatedVideos = (props) => {
   }
    return ( 
         <div>
-            <RTCEncodedVideoFrame>{videoID}</RTCEncodedVideoFrame>
+            <VideoThumbnail {video_ID} />
         </div>
      );
 }

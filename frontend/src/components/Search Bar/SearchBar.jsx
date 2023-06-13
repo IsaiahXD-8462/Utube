@@ -10,7 +10,7 @@ const SearchBar= (props) => {
         const response = await axios.get('http://127.0.0.1:8000/comments/all/')
         try {response =>
           console.log(response.data);
-          setVideos(response.data)}
+          setmedia(response.data)}
         catch {error =>
           console.log(error)
         };

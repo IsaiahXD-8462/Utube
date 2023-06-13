@@ -1,8 +1,4 @@
-import { useParams } from "react-router-dom";
-
-const VideoPlayer = () => {
-
-    const { videoID } = useParams();
+const VideoPlayer = (props) => {
 
     return (
        <iframe 
@@ -10,7 +6,7 @@ const VideoPlayer = () => {
        type="text/html" 
        width="640" 
        height="390"
-       src={`http://www.youtube.com/embed/${videoID}`}
+       src={`http://www.youtube.com/embed/${props.video_ID}`}
        frameborder="0">
        </iframe>
     );
