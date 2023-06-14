@@ -9,10 +9,9 @@ const SearchBar= (props) => {
     
     async function searchallmedia() {
         const response = await axios.get('http://127.0.0.1:8000/comments/all/')
-        try {response =>
-          console.log(response.data);
+        try{
           setmedia(response.data)}
-        catch {error =>
+        catch(error){
           console.log(error)
         };
       }

@@ -9,10 +9,9 @@ const RelatedVideos = (props) => {
     
     async function getallvideos() {
     const response = await axios.get('http://127.0.0.1:8000/api/auth/comments/comment/all')
-    try {response =>
-      console.log(response.data);
+    try{
       setVideo(response.data)}
-    catch {error =>
+    catch(error){
       console.log(error)
     };
   }
