@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import axios from 'axios';
-import videoThumbnail from '../Thumbnail/Thumbnail';
 
 const RelatedVideos = (props) => {
     
    const [video, setVideo] = useState([]);
     
     async function getallvideos() {
-    const response = await axios.get('http://127.0.0.1:8000/api/auth/comments/comment/all')
+    const response = await axios.get("https://www.googleapis.com/youtube/v3/search?relatedToVideoId='${props.video_ID}'&type=video&key=AIzaSyCij_i9QTAd7j1oN_WgDX73RdjZPNV5hbw&part=snippet")
     try{
       setVideo(response.data)}
     catch(error){
@@ -17,7 +16,7 @@ const RelatedVideos = (props) => {
   }
    return ( 
         <div>
-            <videoThumbnail RelatedVideos='{props.video_ID, props.text}' />
+            <RelatedVideos allvideos={getallvideos(video)} />
         </div>
      );
 }
